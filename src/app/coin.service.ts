@@ -15,8 +15,8 @@ export class CoinService {
 // A couple of RxJs Subjects very important for communicating across Angular Components
 coinsSubject: Subject<Coin[]>; //notifies it’s observers of coin data fetched from the API
 filteredCoinsSubject: Subject<Coin[]>; //notifies it’s observers the filtered collection of crypto currency data. So if in the multiselect filter, only two crypto coins are selected then, the most recent value emitted by subscribing to filteredCoinsSubject will be an array of length two.
-apiSubject: Subject; //notifies it’s observers with a string message based on api actions
-fiatSubject: Subject; //notifies it’s observers about the value of the selected fiat currency when it is updated.
+apiSubject: Subject; // notifies it’s observers with a string message based on api actions
+fiatSubject: Subject; // notifies it’s observers about the value of the selected fiat currency when it is updated.
 constructor(private http: HttpClient) {
     this.filter = [];
     // we initialize our subjects
